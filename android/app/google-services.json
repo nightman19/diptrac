@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1080860598808",
+    "project_id": "diptrac-user",
+    "storage_bucket": "diptrac-user.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080860598808:android:918ceaa19113af612dd96d",
+        "android_client_info": {
+          "package_name": "com.example.diptrac_user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080860598808-senu0e51uap961keog5g4hn4r44oeqch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBubRibp45-o9BqVGUEXkupjIy8jN5wbXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080860598808-senu0e51uap961keog5g4hn4r44oeqch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
