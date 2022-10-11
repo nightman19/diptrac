@@ -1,3 +1,4 @@
+import 'package:diptrac_user/data/models/models.dart';
 import 'package:diptrac_user/ui/diptrac_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -15,13 +16,13 @@ class UserTypeCard extends StatelessWidget {
 
   Widget _userCardType(BuildContext context){
     return InkWell(
-      onTap: (){},
+      onTap: (){
+        print('Hello');
+      },
       child: Card(
-        elevation: 50,
-        // shadowColor: Colors.black,
         color: Colors.purple,
         child: SizedBox(
-          height: 150,
+          height: 120,
           width: 350,
           child: Padding(
             padding: EdgeInsets.all(16),

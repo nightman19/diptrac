@@ -2,6 +2,7 @@ import 'package:diptrac_user/data/models/models.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/widgets.dart';
+
 class UserRegistrationType extends StatelessWidget {
   static MaterialPage page() {
     return MaterialPage(
@@ -22,12 +23,18 @@ class UserRegistrationType extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(
+              height: 120,
+              child: Image(
+                image: AssetImage('assets/images/diptrac_logo.png'),
+              ),
+            ),
             Row(
               children: [
                 Text(
-                  'Register \nto',
+                  'Register to',
                   style: TextStyle(
-                    fontSize: 64,
+                    fontSize: 48,
                   ),
                 ),
               ],
