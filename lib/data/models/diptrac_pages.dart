@@ -1,6 +1,8 @@
 class DiptracPages {
   // static String splashPath = '/splash';
   static String loginPath = '/login';
+  static String deliverymanPath = '/deliveryman';
+  static String deliverypointPath = '/deliverypoint';
   // static String onboardingPath = '/onboarding';
   static String mainPath = '/';
   static String mapPath = '/map';

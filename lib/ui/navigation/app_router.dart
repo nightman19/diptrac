@@ -33,7 +33,9 @@ class AppRouter extends RouterDelegate
       onPopPage: _handlePopPage,
       pages: [
         if (!appStateManager.isInitialized) UserRegistrationType.page(),
-        if(appStateManager.isInitialized && appStateManager.getSelectedUserCard == 1) MainPage.page()
+      //   if (appStateManager.isInitialized &&
+      //       appStateManager.getSelectedUserCard == 1)
+      //     MainPage.page(appStateManager.getSelectedUserCard),
       ],
     );
   }
@@ -47,5 +49,4 @@ class AppRouter extends RouterDelegate
 
   @override
   Future<void> setNewRoutePath(configuration) async => null;
-
 }

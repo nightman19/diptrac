@@ -11,7 +11,7 @@ import '../../ui/google_maps.dart';
 import 'google_map_page.dart';
 
 class MainPage extends StatefulWidget {
-  static MaterialPage page() {
+  static MaterialPage page(int getSelectedUserCard) {
     return MaterialPage(
       name: DiptracPages.mainPath,
       key: ValueKey(DiptracPages.mainPath),

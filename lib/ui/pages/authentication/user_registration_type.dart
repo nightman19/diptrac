@@ -1,9 +1,10 @@
 import 'package:diptrac_user/data/models/models.dart';
+import 'package:diptrac_user/ui/pages/pages.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/widgets.dart';
 
-class UserRegistrationType extends StatelessWidget {
+class UserRegistrationType extends StatefulWidget {
   static MaterialPage page() {
     return MaterialPage(
       name: DiptracPages.userRegistrationTypePath,
@@ -12,47 +13,69 @@ class UserRegistrationType extends StatelessWidget {
     );
   }
 
-  const UserRegistrationType({Key? key}) : super(key: key);
+  const UserRegistrationType({
+    Key? key,
+  }) : super(key: key);
 
+  @override
+  State<UserRegistrationType> createState() => _UserRegistrationTypeState();
+}
+
+class _UserRegistrationTypeState extends State<UserRegistrationType> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 120,
-              child: Image(
-                image: AssetImage('assets/images/diptrac_logo.png'),
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 120,
+                child: Image(
+                  image: AssetImage('assets/images/diptrac_logo.png'),
+                ),
               ),
-            ),
-            Row(
-              children: [
-                Text(
-                  'Register to',
-                  style: TextStyle(
-                    fontSize: 48,
+              const SizedBox(
+                height: 16.0,
+              ),
+              Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left: 16)),
+                  Text(
+                    'Register to',
+                    style: TextStyle(
+                      fontSize: 48,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              UserTypeCard(
+                onTapUserType: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DeliverymanPage(),
+
                   ),
                 ),
-              ],
-            ),
-            Row(
-              children: [
-                UserTypeCard(),
-              ],
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            Row(
-              children: [
-                UserTypeCard(),
-              ],
-            )
-          ],
+              ),
+              const SizedBox(
+                height: 16.0,
+              ),
+              UserTypeCard(
+                onTapUserType: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DeliverypointPage(),
+
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
